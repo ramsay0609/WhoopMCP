@@ -1,0 +1,6 @@
+.env
+whoop-tokens.json
+.whoop-mcp/
+.venv/
+__pycache__/
+*.pyc

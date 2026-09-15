@@ -1,0 +1,5 @@
+# Pinned to the 1.x line: mcp 2.0 renamed FastMCP -> MCPServer with a
+# different API, and this script still uses mcp.server.fastmcp.FastMCP.
+mcp[cli]>=1.2.0,<2
+httpx>=0.27.0
+python-dotenv>=1.0.0
