@@ -48,7 +48,7 @@ python whoop_mcp.py
 This runs the MCP server over stdio. To register it with Claude Code so you can ask things like "what's my recovery today?" from any session:
 
 ```bash
-claude mcp add whoop /path/to/.venv/bin/python /path/to/whoop_mcp.py
+claude mcp add --scope user --transport stdio whoop -- /absolute/path/to/.venv/bin/python /absolute/path/to/whoop_mcp.py
 ```
 
 ## Tools
