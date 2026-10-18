@@ -32,7 +32,7 @@ from mcp.server.fastmcp import FastMCP
 try:  # optional: load .env if python-dotenv is installed
     from dotenv import load_dotenv
 
-    load_dotenv()
+    load_dotenv(Path(__file__).resolve().with_name(".env"))
 except ImportError:
     pass
 
