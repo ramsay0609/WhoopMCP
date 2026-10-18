@@ -1,4 +1,4 @@
-# WhoopAnalysis
+# WhoopMCP
 
 A personal, read-only MCP (Model Context Protocol) server that gives Claude access to your own WHOOP health data — recovery, HRV, sleep, strain, and workouts — through WHOOP's official Developer API v2.
 

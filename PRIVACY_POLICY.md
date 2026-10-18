@@ -1,8 +1,8 @@
-# Privacy Policy — WhoopAnalysis
+# Privacy Policy — WhoopMCP
 
-**Last updated: September 15, 2026**
+**Last updated: October 18, 2026**
 
-WhoopAnalysis is a personal-use tool built and used solely by its developer to access the developer's own WHOOP data for personal fitness tracking and analysis. It is not offered, marketed, or made available to any other users.
+WhoopMCP is a personal-use tool built and used solely by its developer to access the developer's own WHOOP data for personal fitness tracking and analysis. It is not offered, marketed, or made available to any other users.
 
 ## Data accessed
 
@@ -17,4 +17,4 @@ Via the WHOOP API and with the developer's explicit OAuth consent, the app reads
 
 ## Contact
 
-For questions about this policy, open an issue in this repository: https://github.com/ramsay0609/WhoopAnalysis/issues
+For questions about this policy, open an issue in this repository: https://github.com/ramsay0609/WhoopMCP/issues
