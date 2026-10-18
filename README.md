@@ -13,43 +13,22 @@ Create an app at the [WHOOP developer dashboard](https://developer-dashboard.who
 - **Redirect URI:** `http://localhost:8765/callback`
 - **Scopes:** `read:profile`, `read:body_measurement`, `read:cycles`, `read:recovery`, `read:sleep`, `read:workout` (the `offline` scope is requested automatically at login time, not configured in the dashboard)
 
-### 2. Install dependencies
-
-Requires Python 3.10+.
+### 2. Run setup
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+./setup.sh
 ```
 
-### 3. Configure credentials
+That's the only command. It:
 
-```bash
-cp .env.example .env
-```
+- creates a Python virtual environment and installs dependencies in the background (needs Python 3.10+ installed; it finds Homebrew's Python even if it isn't on your `PATH`)
+- asks for your WHOOP **Client ID** and **Client Secret** in the terminal (the secret is hidden as you type) and saves them to `.env` with mode `600`
+- opens your browser for WHOOP's consent screen, then saves tokens to `~/.whoop-mcp/tokens.json` (mode `600`)
+- registers the server with Claude Code for all your projects
 
-Edit `.env` and fill in `WHOOP_CLIENT_ID` and `WHOOP_CLIENT_SECRET` from your WHOOP developer app. Never commit this file.
+Then open a new Claude Code session and ask "what's my recovery today?".
 
-### 4. Log in
-
-```bash
-python whoop_mcp.py login
-```
-
-This opens a browser to WHOOP's consent screen. After you approve, tokens are saved locally to `~/.whoop-mcp/tokens.json` (mode `600`).
-
-### 5. Run the server
-
-```bash
-python whoop_mcp.py
-```
-
-This runs the MCP server over stdio. To register it with Claude Code so you can ask things like "what's my recovery today?" from any session:
-
-```bash
-claude mcp add --scope user --transport stdio whoop -- /absolute/path/to/.venv/bin/python /absolute/path/to/whoop_mcp.py
-```
+It's safe to re-run: finished steps are skipped. Re-run it after moving or renaming this folder to update the registration. To change credentials, delete `.env` and re-run. If the Claude Code CLI isn't installed, the script tells you how to install it.
 
 ## Tools
 
