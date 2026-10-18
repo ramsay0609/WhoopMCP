@@ -4,3 +4,4 @@ whoop-tokens.json
 .venv/
 __pycache__/
 *.pyc
+*.db
